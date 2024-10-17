@@ -10,5 +10,8 @@ public class WebController {
         return "html/home-page";
     }
 
-
+    @GetMapping("/login")
+    public String loginPage() {
+        return "html/form/login-form";
+    }
 }
