@@ -12,7 +12,7 @@ public class WebController {
 
     @GetMapping("/login")
     public String loginPage() {
-        return "form/sign-in-form";
+        return "form/login-form";
     }
 
     @GetMapping("/register")
