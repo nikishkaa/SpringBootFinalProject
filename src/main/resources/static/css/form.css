@@ -66,6 +66,18 @@ h3 {
     background-image: url("../img/sign-up-background.jpg");
 }
 
+.addstableform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/stable-form-background.jpg");
+}
+
+
 .inputbox {
     position: relative;
     margin: 20px 0;
@@ -147,4 +159,54 @@ button:hover {
 .register p a:hover {
     text-decoration: underline;
     color: #a8a8a8;
+}
+
+
+/*Scroller*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 169, 169, 0.5);
+    border-radius: 6px;
+    border: 3px solid transparent;
+    backdrop-filter: blur(8px);
+}
+
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }

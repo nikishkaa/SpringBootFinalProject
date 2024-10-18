@@ -24,4 +24,9 @@ public class WebController {
     public String passwordResetPage() {
         return "form/password-recovery-form";
     }
+
+    @GetMapping("/new-stable")
+    public String addNewStablePage() {
+        return "form/stable-creation-form";
+    }
 }

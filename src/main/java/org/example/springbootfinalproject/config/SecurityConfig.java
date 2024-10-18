@@ -17,6 +17,7 @@ public class SecurityConfig {
                 auth.requestMatchers("/register").permitAll().requestMatchers("home")
                         .permitAll().requestMatchers("users").permitAll().requestMatchers("home-page")
                         .permitAll().requestMatchers("password-recovery").permitAll()
+                        .requestMatchers("new-stable").permitAll()
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
         // LOGIN
