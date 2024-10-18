@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class WebController {
+public class UserController {
     @GetMapping("/home-page")
     public String homePage() {
         return "home-page";
@@ -23,10 +23,5 @@ public class WebController {
     @GetMapping("/password-recovery")
     public String passwordResetPage() {
         return "form/password-recovery-form";
-    }
-
-    @GetMapping("/new-stable")
-    public String addNewStablePage() {
-        return "form/stable-creation-form";
     }
 }
