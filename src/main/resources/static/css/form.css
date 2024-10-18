@@ -7,17 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url("../img/password-recovery-background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 section {
     position: relative;
     max-width: 500px;
@@ -42,6 +31,39 @@ h3 {
     font-size: 1rem;
     color: #fff;
     text-align: center;
+}
+
+.passrecform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/password-recovery-background.jpg");
+}
+
+.signinform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/sign-in-background.jpg");
+}
+
+.signupform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/sign-up-background.jpg");
 }
 
 .inputbox {
