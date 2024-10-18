@@ -18,6 +18,7 @@ public class SecurityConfig {
                         .permitAll().requestMatchers("users").permitAll().requestMatchers("home-page")
                         .permitAll().requestMatchers("password-recovery").permitAll()
                         .requestMatchers("new-stable").permitAll()
+                        .requestMatchers("add-horse").permitAll() //TODO role
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
         // LOGIN

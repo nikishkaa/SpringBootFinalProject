@@ -77,6 +77,18 @@ h3 {
     background-image: url("../img/stable-form-background.jpg");
 }
 
+.addhorseform {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/horse-form-background.jpg");
+}
+
 
 .inputbox {
     position: relative;
