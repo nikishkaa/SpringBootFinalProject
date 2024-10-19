@@ -11,29 +11,43 @@
 </head>
 <body>
 <div class="signinform">
-<section>
-    <form>
-        <h1>HorseNB</h1>
-        <h3>Enter your login credentials</h3>
-        <div class="inputbox">
-            <ion-icon name="mail-outline"></ion-icon>
-            <input type="email" name="email" required>
-            <label>Email*</label>
-        </div>
-        <div class="inputbox">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" name="password" required>
-            <label>Password*</label>
-        </div>
-        <button>Sign In</button>
-        <div class="register">
-            <p>Not Register? <a href="register"> Sign Up</a></p>
-        </div>
-        <div class="register">
-            <p>Forgot a password? <a href="password-recovery"> Reset password</a></p>
-        </div>
-    </form>
-</section>
+    <section>
+        <form>
+            <h1>HorseNB</h1>
+            <h3>Enter your login credentials</h3>
+
+            <!--TODO доделать css -->
+            <div th:if="${param.error}">
+                <div class="error-message">
+                    <p>Invalid Username or Password</p>
+                </div>
+            </div>
+
+            <div th:if="${param.logout}">
+                <div class="logout-message">
+                    <p>Logout Successful!</p>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" name="email" required>
+                <label>Email*</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="password" required>
+                <label>Password*</label>
+            </div>
+            <button>Sign In</button>
+            <div class="register">
+                <p>Not Register? <a href="register"> Sign Up</a></p>
+            </div>
+            <div class="register">
+                <p>Forgot a password? <a href="password-recovery"> Reset password</a></p>
+            </div>
+        </form>
+    </section>
 </div>
 </body>
 </html>
