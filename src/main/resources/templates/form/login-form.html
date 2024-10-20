@@ -12,7 +12,7 @@
 <body>
 <div class="signinform">
     <section>
-        <form>
+        <form th:action="@{/login}" method="post" role="form" th:object="${user}">
             <h1>HorseNB</h1>
             <h3>Enter your login credentials</h3>
 
@@ -31,12 +31,13 @@
 
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
-                <input type="email" name="email" required>
+                <input th:field="*{username}" type="email" name="email" required>
+                <!--TODO переделать под email-->
                 <label>Email*</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" name="password" required>
+                <input th:field="*{password}" type="password" name="password" required>
                 <label>Password*</label>
             </div>
             <button>Sign In</button>
