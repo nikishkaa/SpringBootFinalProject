@@ -10,7 +10,6 @@ import java.util.Collection;
 @AllArgsConstructor
 @Data
 public class CustomUserDetails implements UserDetails {
-
     private String username;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;

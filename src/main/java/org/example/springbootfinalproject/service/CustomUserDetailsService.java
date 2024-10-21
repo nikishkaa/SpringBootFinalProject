@@ -2,7 +2,7 @@ package org.example.springbootfinalproject.service;
 
 import org.example.springbootfinalproject.dto.CustomUserDetails;
 import org.example.springbootfinalproject.entity.user.User;
-import org.example.springbootfinalproject.repository.UserRepository;
+import org.example.springbootfinalproject.repository.userrepository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,8 +26,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        User user = userRepository.findByUsername(username);
+        User user = userRepository.findByEmail(username);
         if (user == null) {
             throw new UsernameNotFoundException("Username or Password not found");
         }

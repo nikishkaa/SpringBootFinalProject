@@ -43,7 +43,7 @@ public class UserController {
 
     @PostMapping("/register")
     public String registerSava(@ModelAttribute("user") UserDto userDto, Model model) {
-        User user = userService.findByUsername(userDto.getUsername());
+        User user = userService.findByEmail(userDto.getUsername());
         if (user != null) {
             model.addAttribute("Userexist", user);
             return "form/sign-up-form";
