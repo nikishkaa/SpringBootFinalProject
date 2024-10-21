@@ -1,13 +1,11 @@
 package org.example.springbootfinalproject.repository;
 
-
 import org.example.springbootfinalproject.dto.UserDto;
-import org.example.springbootfinalproject.entity.AppUser;
+import org.example.springbootfinalproject.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<AppUser, Long> {
+public interface UserRepository extends JpaRepository<User, Integer> {
+    User findByUsername(String username);
 
-    AppUser findByUsername(String username);
-
-    AppUser save(UserDto userDto);
+    User save(UserDto userDto);
 }

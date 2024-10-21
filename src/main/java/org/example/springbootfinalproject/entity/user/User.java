@@ -24,7 +24,7 @@ public class User {
     private int id;
 
     @Column(name = "name", length = 128, nullable = false)
-    private String name;
+    private String username;
 
     @Column(name = "email", unique = true, length = 128, nullable = false)
     private String email;
@@ -76,4 +76,13 @@ public class User {
 
     @Column(name = "updated_ts", nullable = true)
     private Timestamp updatedTs;
+
+    public User(String username, String password, String email, String phoneNumber) {
+        super();
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
 }

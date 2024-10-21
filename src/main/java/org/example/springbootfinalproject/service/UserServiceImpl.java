@@ -2,7 +2,7 @@ package org.example.springbootfinalproject.service;
 
 
 import org.example.springbootfinalproject.dto.UserDto;
-import org.example.springbootfinalproject.entity.AppUser;
+import org.example.springbootfinalproject.entity.user.User;
 import org.example.springbootfinalproject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,14 +22,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AppUser findByUsername(String username) {
+    public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
     @Override
-    public AppUser save(UserDto userDto) {
-        AppUser user = new AppUser(userDto.getUsername(), passwordEncoder.encode(userDto.getPassword()));
+    public User save(UserDto userDto) {
+        User user = new User(userDto.getUsername(), passwordEncoder.encode(userDto.getPassword()), userDto.getEmail(), userDto.getPhoneNumber());
         return userRepository.save(user);
     }
+
 
 }

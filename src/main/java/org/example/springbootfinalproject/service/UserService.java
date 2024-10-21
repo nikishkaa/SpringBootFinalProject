@@ -1,12 +1,11 @@
 package org.example.springbootfinalproject.service;
 
-
 import org.example.springbootfinalproject.dto.UserDto;
-import org.example.springbootfinalproject.entity.AppUser;
+import org.example.springbootfinalproject.entity.user.User;
 
 public interface UserService {
-    AppUser findByUsername(String username);
+    User findByUsername(String username);
 
-    AppUser save(UserDto userDto);
+    User save(UserDto userDto);
 
 }

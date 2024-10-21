@@ -1,7 +1,7 @@
 package org.example.springbootfinalproject.controller;
 
 import org.example.springbootfinalproject.dto.UserDto;
-import org.example.springbootfinalproject.entity.AppUser;
+import org.example.springbootfinalproject.entity.user.User;
 import org.example.springbootfinalproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -43,7 +43,7 @@ public class UserController {
 
     @PostMapping("/register")
     public String registerSava(@ModelAttribute("user") UserDto userDto, Model model) {
-        AppUser user = userService.findByUsername(userDto.getUsername());
+        User user = userService.findByUsername(userDto.getUsername());
         if (user != null) {
             model.addAttribute("Userexist", user);
             return "form/sign-up-form";
@@ -54,7 +54,8 @@ public class UserController {
 
 
     @GetMapping("/password-recovery")
-    public String passwordResetPage() {
+    public String passwordResetPage(Model model, UserDto userDto) {
+        model.addAttribute("user", userDto);
         return "form/password-recovery-form";
     }
 }
