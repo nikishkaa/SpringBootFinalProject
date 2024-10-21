@@ -1,6 +1,6 @@
 package org.example.springbootfinalproject.repository.userrepository;
 
-import org.example.springbootfinalproject.dto.UserDto;
+import org.example.springbootfinalproject.dto.userdto.UserDto;
 import org.example.springbootfinalproject.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

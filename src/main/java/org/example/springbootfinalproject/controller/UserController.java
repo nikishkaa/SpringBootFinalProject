@@ -1,8 +1,8 @@
 package org.example.springbootfinalproject.controller;
 
-import org.example.springbootfinalproject.dto.UserDto;
+import org.example.springbootfinalproject.dto.userdto.UserDto;
 import org.example.springbootfinalproject.entity.user.User;
-import org.example.springbootfinalproject.service.UserService;
+import org.example.springbootfinalproject.service.userservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;

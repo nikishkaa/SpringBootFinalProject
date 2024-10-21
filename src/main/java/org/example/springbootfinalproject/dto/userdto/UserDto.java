@@ -1,4 +1,4 @@
-package org.example.springbootfinalproject.dto;
+package org.example.springbootfinalproject.dto.userdto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

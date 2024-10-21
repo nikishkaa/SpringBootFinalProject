@@ -1,6 +1,6 @@
-package org.example.springbootfinalproject.service;
+package org.example.springbootfinalproject.service.userservice;
 
-import org.example.springbootfinalproject.dto.CustomUserDetails;
+import org.example.springbootfinalproject.dto.userdto.CustomUserDetails;
 import org.example.springbootfinalproject.entity.user.User;
 import org.example.springbootfinalproject.repository.userrepository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;

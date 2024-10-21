@@ -1,6 +1,6 @@
 package org.example.springbootfinalproject.config;
 
-import org.example.springbootfinalproject.service.CustomUserDetailsService;
+import org.example.springbootfinalproject.service.userservice.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
