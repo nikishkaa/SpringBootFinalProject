@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Address</title>
+    <link rel="icon" href="img/iconpng.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/signup.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="useraddress">
+    <section>
+        <form th:action="@{/address}" method="post" role="form" th:object="${address}">
+            <h1>HorseNB</h1>
+            <h3>Add your Address</h3>
+
+            <div th:if="${param.success}" class="infobox">
+                <div class="success-message">
+                    <p>Address has been saved!</p>
+                </div>
+            </div>
+
+            <!-- TODO Доделать-->
+            <div class="inputbox">
+                <ion-icon name="globe-outline"></ion-icon>
+                <input th:field="*{country}" type="text" name="country" required>
+                <label>Country*</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="golf-outline"></ion-icon>
+                <input th:field="*{region}" type="text" name="region" required>
+                <label>Region*</label>
+            </div>
+            <button>Save</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

@@ -58,4 +58,11 @@ public class UserController {
         model.addAttribute("user", userDto);
         return "form/password-recovery-form";
     }
+
+    //    TODO доделать
+    @GetMapping("/address")
+    public String address(Model model, UserDto userDto) {
+//        model.addAttribute("address", );
+        return "form/user-address-form";
+    }
 }

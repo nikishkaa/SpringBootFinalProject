@@ -30,6 +30,7 @@ public class SecurityConfig {
                         .permitAll().requestMatchers("password-recovery").permitAll()
                         .requestMatchers("new-stable").permitAll()
                         .requestMatchers("add-horse").permitAll() //TODO role
+                        .requestMatchers("address").permitAll()
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
         // LOGIN
