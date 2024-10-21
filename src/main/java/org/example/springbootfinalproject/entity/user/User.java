@@ -1,6 +1,7 @@
 package org.example.springbootfinalproject.entity.user;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.springbootfinalproject.entity.announcement.HorseAnnouncement;
@@ -15,6 +16,7 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "User")
 @Table(name = "users")
 public class User {
@@ -76,6 +78,7 @@ public class User {
 
     @Column(name = "updated_ts", nullable = true)
     private Timestamp updatedTs;
+
 
     public User(String username, String password, String email, String phoneNumber) {
         super();
