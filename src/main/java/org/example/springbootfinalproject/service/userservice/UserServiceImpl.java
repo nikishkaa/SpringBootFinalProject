@@ -4,7 +4,7 @@ package org.example.springbootfinalproject.service.userservice;
 import org.example.springbootfinalproject.dto.userdto.UserDto;
 import org.example.springbootfinalproject.entity.user.Role;
 import org.example.springbootfinalproject.entity.user.User;
-import org.example.springbootfinalproject.repository.rolerepository.RoleRepository;
+import org.example.springbootfinalproject.repository.userrepository.RoleRepository;
 import org.example.springbootfinalproject.repository.userrepository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

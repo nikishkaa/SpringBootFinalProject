@@ -1,4 +1,4 @@
-package org.example.springbootfinalproject.repository.rolerepository;
+package org.example.springbootfinalproject.repository.userrepository;
 
 import org.example.springbootfinalproject.entity.user.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
