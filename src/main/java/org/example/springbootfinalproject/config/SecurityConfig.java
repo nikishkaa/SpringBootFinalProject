@@ -26,8 +26,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth ->
-                auth.requestMatchers("/register").permitAll().requestMatchers("home")
-                        .permitAll().requestMatchers("users").permitAll().requestMatchers("home-page")
+                auth.requestMatchers("/register").permitAll()
+                        .requestMatchers("users").permitAll().requestMatchers("home-page")
                         .permitAll().requestMatchers("password-recovery").permitAll()
                         .requestMatchers("new-stable").permitAll()
                         .requestMatchers("add-horse").permitAll() //TODO role
