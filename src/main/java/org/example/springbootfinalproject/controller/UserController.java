@@ -55,9 +55,8 @@ public class UserController {
     }
 
 
-    @GetMapping("/password-recovery")
-    public String passwordResetPage(Model model, UserDto userDto) {
-        model.addAttribute("user", userDto);
+    @GetMapping("/forgot-password")
+    public String passwordResetPage() {
         return "form/password-recovery-form";
     }
 

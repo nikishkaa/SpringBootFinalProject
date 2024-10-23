@@ -28,7 +28,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth ->
                 auth.requestMatchers("/register").permitAll()
                         .requestMatchers("users").permitAll().requestMatchers("home-page")
-                        .permitAll().requestMatchers("password-recovery").permitAll()
+                        .permitAll().requestMatchers("forgot-password").permitAll()
                         .requestMatchers("new-stable").permitAll()
                         .requestMatchers("add-horse").permitAll() //TODO role
                         .requestMatchers("address").permitAll()
