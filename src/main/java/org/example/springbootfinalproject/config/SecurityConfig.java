@@ -22,6 +22,7 @@ public class SecurityConfig {
     public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth ->
@@ -31,6 +32,7 @@ public class SecurityConfig {
                         .requestMatchers("new-stable").permitAll()
                         .requestMatchers("add-horse").permitAll() //TODO role
                         .requestMatchers("address").permitAll()
+                        .requestMatchers("announcement").permitAll()
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
         // LOGIN
@@ -44,6 +46,7 @@ public class SecurityConfig {
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout").permitAll());
         return http.build();
     }
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());
