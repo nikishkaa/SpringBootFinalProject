@@ -41,13 +41,6 @@ h3 {
 
 
 .passrecform {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     background-image: url("../img/password-recovery-background.jpg");
 }
 
@@ -104,6 +97,17 @@ h3 {
     background-position: center;
     background-size: cover;
     background-image: url("../img/user-address-background.jpg");
+}
+
+.announcementaddform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/announcement-form-background.jpg");
 }
 
 
