@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class UserController {
     @Autowired
@@ -58,6 +60,15 @@ public class UserController {
         model.addAttribute("user", userDto);
         return "form/password-recovery-form";
     }
+
+
+    @GetMapping("/users")
+    public String users(Model model){
+        List<UserDto> users = userService.findAllUsers();
+        model.addAttribute("users", users);
+        return "list/users-list";
+    }
+
 
     //    TODO доделать
     @GetMapping("/address")

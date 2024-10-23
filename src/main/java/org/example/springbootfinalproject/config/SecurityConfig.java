@@ -33,6 +33,9 @@ public class SecurityConfig {
                         .requestMatchers("add-horse").permitAll() //TODO role
                         .requestMatchers("address").permitAll()
                         .requestMatchers("announcement").permitAll()
+
+                        .requestMatchers("users").permitAll() // TODO role
+
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
         // LOGIN
