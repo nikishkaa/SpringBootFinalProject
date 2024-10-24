@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&dispay');
 
-h2{
+h2 {
     font-size: 1.5rem;
 }
 
@@ -63,4 +63,23 @@ a.delete-button {
 
 a.delete-button:hover {
     background-color: #b80404;
+}
+
+a.edit-button {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #4287f5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.edit-button:hover {
+    background-color: #0763f5;
 }

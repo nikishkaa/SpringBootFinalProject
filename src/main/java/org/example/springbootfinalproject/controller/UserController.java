@@ -84,4 +84,12 @@ public class UserController {
         userService.deleteByEmail(userDto.getEmail());
         return "list/users-list";
     }
+
+    @RequestMapping(value = "/update-user-{email}")
+    public String updateUser(UserDto userDto, Model model) {
+        users(model);
+        return "list/users-list";
+    }
+
+
 }

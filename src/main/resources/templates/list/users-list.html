@@ -14,6 +14,7 @@
         <th>Email</th>
         <th>User Name</th>
         <th>Phone Number</th>
+        <th>Update User</th>
         <th>Delete User</th>
     </tr>
     </thead>
@@ -22,6 +23,7 @@
         <td th:text="${user.email}"></td>
         <td th:text="${user.username}"></td>
         <td th:text="${user.phoneNumber}"></td>
+        <td ><a th:href="@{/update-user-{email}(email=${user.email})}" class="edit-button">Update</a></td>
         <td ><a th:href="@{/delete-user-{email}(email=${user.email})}" class="delete-button">Delete</a></td>
     </tr>
     </tbody>

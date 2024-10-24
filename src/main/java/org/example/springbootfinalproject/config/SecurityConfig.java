@@ -36,6 +36,7 @@ public class SecurityConfig {
 
                         .requestMatchers("users").permitAll() // TODO role
                         .requestMatchers("delete-user-{email}").permitAll() // TODO role
+                        .requestMatchers("update-user-{email}").permitAll() // TODO role
 
                         .requestMatchers("/css/**").permitAll().requestMatchers("/js/**").permitAll().requestMatchers("/img/**").permitAll());
 
