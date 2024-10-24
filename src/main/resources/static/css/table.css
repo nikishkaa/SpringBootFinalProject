@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&dispay');
+
+h2{
+    font-size: 1.5rem;
+}
+
 .table {
     width: 100%;
     margin-bottom: 20px;
