@@ -76,7 +76,7 @@ public class UserController {
 
 
     @RequestMapping(value = "/delete-user-{email}")
-    public String deleteUser(@PathVariable("email") String userEmail, Model model, UserDto userDto) {
+    public String deleteUser(@PathVariable("email") Model model, UserDto userDto) {
         users(model);
         userService.deleteByEmail(userDto.getEmail());
         return "list/users-list";
