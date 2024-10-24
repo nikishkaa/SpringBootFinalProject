@@ -86,9 +86,11 @@ public class UserController {
     }
 
     @RequestMapping(value = "/update-user-{email}")
-    public String updateUser(UserDto userDto, Model model) {
-        users(model);
-        return "list/users-list";
+    public String updateUser(@PathVariable String email, Model model) {
+        User user = userService.findByEmail(email);
+        model.addAttribute("user", user);
+        model.addAttribute("edit", true);
+        return "form/sign-up-form";
     }
 
 
