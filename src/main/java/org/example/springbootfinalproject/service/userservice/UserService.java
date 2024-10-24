@@ -11,4 +11,6 @@ public interface UserService {
     User save(UserDto userDto);
 
     List<UserDto> findAllUsers();
+
+    void deleteByEmail(String email);
 }

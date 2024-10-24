@@ -75,12 +75,10 @@ public class UserController {
     }
 
 
-
-
     @RequestMapping(value = "/delete-user-{email}")
-    public String deleteUser(@PathVariable("email") String userEmail, Model model) {
+    public String deleteUser(@PathVariable("email") String userEmail, Model model, UserDto userDto) {
         users(model);
-        // Здесь должен быть код для удаления пользователя
+        userService.deleteByEmail(userDto.getEmail());
         return "list/users-list";
     }
 }

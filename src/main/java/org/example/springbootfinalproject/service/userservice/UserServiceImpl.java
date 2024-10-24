@@ -8,6 +8,7 @@ import org.example.springbootfinalproject.repository.userrepository.UserReposito
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -63,5 +64,12 @@ public class UserServiceImpl implements UserService {
 
     private UserDto mapToUserDto(User user) {
         return new UserDto(user.getEmail(), user.getUsername(), user.getPhoneNumber());
+    }
+
+
+    @Override
+    @Transactional
+    public void deleteByEmail(String email) {
+        userRepository.deleteByEmail(email);
     }
 }
