@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -74,5 +72,15 @@ public class UserController {
     public String address(Model model, UserDto userDto) {
 //        model.addAttribute("address", );
         return "form/user-address-form";
+    }
+
+
+
+
+    @RequestMapping(value = "/delete-user-{email}")
+    public String deleteUser(@PathVariable("email") String userEmail, Model model) {
+        users(model);
+        // Здесь должен быть код для удаления пользователя
+        return "list/users-list";
     }
 }

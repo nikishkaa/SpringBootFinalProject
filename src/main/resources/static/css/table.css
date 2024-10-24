@@ -36,6 +36,25 @@
     bottom: 0px;
     left: 0px;
     width: 105%;
+    pointer-events: none;
 }
 
 
+a.delete-button {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #ff2b2b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.delete-button:hover {
+    background-color: #b80404;
+}
