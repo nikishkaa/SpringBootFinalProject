@@ -76,7 +76,10 @@ public class UserController {
 
 
     @RequestMapping(value = "/delete-user-{email}")
-    public String deleteUser(@PathVariable("email") Model model, UserDto userDto) {
+    public String deleteUser(UserDto userDto, Model model) {
+
+//        public String deleteUser(@PathVariable("email") String userEmail /*TODO ДЛЯ ЧЕГО ТУТ ЭТА ПЕРЕМЕННАЯ И ПОЧЕМУ БЕЗ НЕЕ НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!! , UserDto userDto, Model model) {
+
         users(model);
         userService.deleteByEmail(userDto.getEmail());
         return "list/users-list";
