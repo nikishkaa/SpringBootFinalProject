@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2>List of Registered Users</h2>
+<a class="add-button" href="register">New User</a>
 <table class="table">
     <thead class="table-dark">
     <tr>
@@ -23,8 +24,8 @@
         <td th:text="${user.email}"></td>
         <td th:text="${user.username}"></td>
         <td th:text="${user.phoneNumber}"></td>
-        <td ><a th:href="@{/update-user-{email}(email=${user.email})}" class="edit-button">Update</a></td>
-        <td ><a th:href="@{/delete-user-{email}(email=${user.email})}" class="delete-button">Delete</a></td>
+        <td><a th:href="@{/update-user-{email}(email=${user.email})}" class="edit-button">Update</a></td>
+        <td><a th:href="@{/delete-user-{email}(email=${user.email})}" class="delete-button">Delete</a></td>
     </tr>
     </tbody>
 </table>
