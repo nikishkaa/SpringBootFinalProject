@@ -10,5 +10,4 @@ public class SpringBootFinalProjectApplication {
         SpringApplication.run(SpringBootFinalProjectApplication.class, args);
     }
 
-
 }
