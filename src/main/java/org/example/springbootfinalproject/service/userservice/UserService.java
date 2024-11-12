@@ -13,4 +13,6 @@ public interface UserService {
     List<UserDto> findAllUsers();
 
     void deleteByEmail(String email);
+
+    User updateUser(UserDto userDto, String email);
 }

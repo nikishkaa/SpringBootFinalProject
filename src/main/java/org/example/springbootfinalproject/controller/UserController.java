@@ -7,7 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -85,7 +91,7 @@ public class UserController {
         return "list/users-list";
     }
 
-    @RequestMapping(value = "/update-user-{email}")
+    @GetMapping(value = "/update-user-{email}")
     public String updateUser(@PathVariable String email, Model model) {
         User user = userService.findByEmail(email);
         model.addAttribute("user", user);
@@ -93,5 +99,17 @@ public class UserController {
         return "form/sign-up-form";
     }
 
+    @PostMapping(value = {"/edit-office-{id}"})
+    public String updateOffice(@Validated UserDto userDto, BindingResult result,
+                               ModelMap model, @PathVariable String email) {
+        if (result.hasErrors()) {
+            return "form/sign-up-form";
+        }
+        userService.deleteByEmail(email);
 
+        userService.updateUser(userDto, email);
+        model.addAttribute("success", "user " + userDto.getEmail() + " updated successfully");
+
+        return "list/users-list";
+    }
 }
