@@ -10,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -71,5 +73,20 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void deleteByEmail(String email) {
         userRepository.deleteByEmail(email);
+    }
+
+    @Override
+    public User updateUser(UserDto userDto, String email) {
+        Timestamp timestamp = new Timestamp(new Date().getTime());
+        User user = userRepository.findByEmail(email);
+        user.setUsername(userDto.getUsername());
+        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+//        if (!user.getEmail().equals(userDto.getEmail())) {
+//            user.setEmail(userDto.getEmail());
+//        }
+        user.setPhoneNumber(userDto.getPhoneNumber());
+        user.setUpdatedTs(timestamp);
+        userRepository.save(user);
+        return null;
     }
 }
