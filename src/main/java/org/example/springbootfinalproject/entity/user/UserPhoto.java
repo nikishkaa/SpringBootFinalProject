@@ -22,6 +22,7 @@ public class UserPhoto {
     @Column(name = "photo_order", nullable = false)
     private int photoOrder;
 
+
     @Column(name = "photo_url", nullable = false)
     private String photoUrl;
 
