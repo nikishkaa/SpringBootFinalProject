@@ -25,7 +25,6 @@ public class UserPhoto {
     @Column(name = "photo_url", nullable = false)
     private String photoUrl;
 
-
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User userId;
