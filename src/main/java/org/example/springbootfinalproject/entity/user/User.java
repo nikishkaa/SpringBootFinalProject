@@ -41,7 +41,6 @@ public class User {
     private boolean isActive;
 
 
-
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
