@@ -75,6 +75,7 @@ public class User {
     @CreationTimestamp
     private Timestamp createdTs;
 
+
     @Column(name = "updated_ts", nullable = true)
     private Timestamp updatedTs;
 
