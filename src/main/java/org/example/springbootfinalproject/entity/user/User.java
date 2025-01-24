@@ -70,6 +70,7 @@ public class User {
     @OneToMany(mappedBy = "sellerId")
     private Set<HorseAnnouncement> announcements;
 
+
     @Column(name = "created_ts", nullable = false)
     @CreationTimestamp
     private Timestamp createdTs;
