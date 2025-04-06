@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Announcement</title>
+    <link rel="icon" href="img/iconpng.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/signup.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="announcementaddform">
+    <section>
+        <form>
+            <!--                th:action="@{/announcement}" method="post" role="form" th:object="${announcement}"-->
+            <h1>HorseNB</h1>
+            <h3>Enter your Announcement information</h3>
+
+            <div th:if="${param.error}" class="infobox">
+                <div class="error-message">
+                    <p>Error</p>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="bookmark-outline"></ion-icon>
+                <input type="text" name="heading" required>
+                <label>Heading*</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="browsers-outline"></ion-icon>
+                <input type="text" name="description" maxlength="2048">
+                <label>Description</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="cash-outline"></ion-icon>
+                <input type="number" name="price" min="0" required>
+                <label>Price*</label>
+            </div>
+
+            <!--            TODO horse_id owner_id-->
+
+            <button>Add Announcement</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

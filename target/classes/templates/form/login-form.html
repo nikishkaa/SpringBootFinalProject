@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="icon" href="img/iconpng.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/signup.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="signinform">
+    <section>
+        <form th:action="@{/login}" method="post" role="form" th:object="${user}">
+            <h1>HorseNB</h1>
+            <h3>Enter your login credentials</h3>
+
+            <div th:if="${param.error}" class="infobox">
+                <div class="error-message">
+                    <p>Invalid Username or Password</p>
+                </div>
+            </div>
+
+            <div th:if="${param.logout}" class="infobox">
+                <div class="logout-message">
+                    <p>Logout Successful!</p>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input th:field="*{username}" type="text" name="email" required>
+                <!--TODO ПОЧЕМУ ТУТ ИСПОЛЬЗУЕМ ПЕРЕМЕННУЮ USERNAME ЕСЛИ ЕСТЬ ОТДЕЛЬНАЯ ПЕРЕМЕННАЯ EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+                <label>Email*</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input th:field="*{password}" type="password" name="password" required>
+                <label>Password*</label>
+            </div>
+            <button>Sign In</button>
+            <div class="register">
+                <p>Not Register? <a href="register"> Sign Up</a></p>
+            </div>
+            <div class="register">
+                <p>Forgot a password? <a href="password-recovery"> Reset password</a></p>
+            </div>
+        </form>
+    </section>
+</div>
+</body>
+</html>

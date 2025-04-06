@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/Users/nikita/Documents/java-project/SpringBootFinalProject/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/Users/nikita/Documents/java-project/SpringBootFinalProject/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/dev-bundle/config",
+  "jarResourcesFolder": "/Users/nikita/Documents/java-project/SpringBootFinalProject/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/Users/nikita/Documents/java-project/SpringBootFinalProject/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

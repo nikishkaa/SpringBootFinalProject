@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&dispay');
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+    position: relative;
+}
+
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.table tr td:first-child, .table tr th:first-child {
+    border-left: none;
+}
+
+.table tr:hover td {
+    background: #FFC2C2;
+}
+
+.table tr:hover td:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 105%;
+    pointer-events: none;
+}
+
+
+a.delete-button {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #ff2b2b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.delete-button:hover {
+    background-color: #b80404;
+}
+
+a.edit-button {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #4287f5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.edit-button:hover {
+    background-color: #0763f5;
+}
+
+a.add-button {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #11ba2d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.add-button:hover {
+    background-color: #195e24;
+}
