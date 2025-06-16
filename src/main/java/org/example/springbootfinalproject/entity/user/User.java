@@ -78,7 +78,6 @@ public class User {
     private Timestamp updatedTs;
 
 
-
     public User(String username, String password, String email, String phoneNumber) {
         super();
         this.username = username;
