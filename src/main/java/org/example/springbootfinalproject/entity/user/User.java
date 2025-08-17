@@ -76,7 +76,8 @@ public class User {
 
     @Column(name = "updated_ts", nullable = true)
     private Timestamp updatedTs;
-    
+
+
     public User(String username, String password, String email, String phoneNumber) {
         super();
         this.username = username;
