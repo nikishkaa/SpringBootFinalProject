@@ -73,7 +73,8 @@ public class User {
     @Column(name = "created_ts", nullable = false)
     @CreationTimestamp
     private Timestamp createdTs;
-    
+
+
     @Column(name = "updated_ts", nullable = true)
     private Timestamp updatedTs;
     public User(String username, String password, String email, String phoneNumber) {
